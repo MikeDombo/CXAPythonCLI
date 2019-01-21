@@ -1,0 +1,30 @@
+schema_version: 1
+language: python
+language_version: 3.7
+uses_template_variables: true
+code_type:
+    desktop:
+        - cli
+author: Michael Dombrowski
+license: BSD 3-clause
+repository: https://github.com/MikeDombo/CXAPythonCLI
+required_template_variables:
+    project_name:
+        type: string
+        validation: regexNoMatch(\s)
+    project_human_name:
+        type: string
+    author:
+        type: string
+    author_email:
+        type: opt(string)
+    website:
+        type: opt(string)
+    repository:
+        type: opt(string)
+    license:
+        type: opt(string)
+    max_line_length:
+        type: integer
+    description:
+        type: opt(string)
