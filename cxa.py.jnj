@@ -26,6 +26,13 @@ class Commands:
     @staticmethod
     def format(args):
         print("=" * 30)
+        print("Running isort")
+        call_command(
+            "isort -rc --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width={{max_line_length}} ./src "
+            + " ".join(args)
+        )
+        print("=" * 30)
+
         print("Running Black")
         call_command("black ./src " + " ".join(args))
         print("=" * 30)
@@ -39,6 +46,14 @@ class Commands:
 
     @staticmethod
     def lint(args):
+        print("=" * 30)
+        print("Running isort")
+        call_command(
+            "isort -rc --diff --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width={{max_line_length}} ./src "
+            + " ".join(args)
+        )
+        print("=" * 30)
+
         print("Running Black")
         print("=" * 30)
         call_command("black ./src --check")
