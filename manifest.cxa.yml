@@ -1,5 +1,6 @@
 schema_version: 1
 title: CXA Basic Python CLI
+description: A Python 3.7 based command line application that comes with code formatting and linting
 language: python
 language_version: 3.7
 uses_template_variables: true
