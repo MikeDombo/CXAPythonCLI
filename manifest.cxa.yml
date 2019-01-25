@@ -1,4 +1,5 @@
 schema_version: 1
+title: CXA Basic Python CLI
 language: python
 language_version: 3.7
 uses_template_variables: true
