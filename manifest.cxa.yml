@@ -28,5 +28,7 @@ required_template_variables:
         type: opt(string)
     max_line_length:
         type: integer
+        validation:
+            min: 0
     description:
         type: opt(string)
