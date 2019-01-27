@@ -40,7 +40,7 @@ class Commands:
     def install(args):
         print("=" * 30)
         print("Installing Pipenv dependencies")
-        call_command("pipenv install " + " ".join(args))
+        call_command("pipenv install --dev " + " ".join(args))
         print("=" * 30)
 
     @staticmethod
@@ -71,6 +71,11 @@ class Commands:
         print("Available Commands:")
         for command in get_commands():
             print(command)
+
+    @staticmethod
+    def test(args):
+        print("Running tests with pytest")
+        call_command("pytest test " + " ".join(args))
 
 
 def call_command(cmd):
